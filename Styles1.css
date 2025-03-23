@@ -1,4 +1,3 @@
-/* styles.css */
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -102,25 +101,134 @@ section {
     font-size: 1.2rem;
 }
 
-/* Recommended Sections */
-.recommended-section, .more-recommended-section {
+/* Content Sections */
+.recommended-section, 
+.more-recommended-section,
+.featured-section,
+.napoleon-section {
+    display: flex;
+    gap: 20px;
+}
+
+.recommended-section, 
+.more-recommended-section,
+.featured-section {
+    justify-content: space-between;
+}
+
+.napoleon-section {
+    align-items: center;
+}
+
+.recommended-section img, 
+.more-recommended-section img,
+.featured-section img,
+.napoleon-section img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.recommended-section img, 
+.more-recommended-section img,
+.featured-section img {
+    height: 200px;
+}
+
+.napoleon-section img {
+    width: 300px;
+    height: auto;
+}
+
+.recommended-section p, 
+.more-recommended-section p,
+.featured-section p,
+.napoleon-section p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.napoleon-section p {
+    margin: 0;
+    text-align: left;
+}
+
+/* Subscription Plans */
+.plans-section {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-.recommended-section img, .more-recommended-section img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.plans-section div {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f1f1f1;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.recommended-section p, .more-recommended-section p {
-    text-align: center;
-    margin-top: 10px;
+.plans-section h4 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.plans-section p {
     font-size: 1rem;
     color: #555;
+    margin: 10px 0;
+}
+
+.plans-section button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.plans-section button:hover {
+    background-color: #c0392b;
+}
+
+/* Sign In Section */
+.signin {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signin form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signin label {
+    font-size: 1rem;
+    color: #555;
+}
+
+.signin input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signin input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
 }
 
 /* Header Spacing */
@@ -169,16 +277,42 @@ footer p {
         margin-right: 10px;
     }
 
-    .recommended-section, .more-recommended-section {
+    .recommended-section,
+    .more-recommended-section,
+    .featured-section,
+    .plans-section,
+    .napoleon-section {
         flex-direction: column;
     }
 
-    .recommended-section img, .more-recommended-section img {
+    .recommended-section img, 
+    .more-recommended-section img,
+    .featured-section img {
         height: auto;
+    }
+
+    .napoleon-section img {
+        width: 100%;
     }
 
     .banner-section blockquote {
         font-size: 1rem;
         padding: 10px;
+    }
+
+    .signin {
+        padding: 15px;
+    }
+
+    .signin input {
+        font-size: 0.9rem;
+    }
+
+    .napoleon-section {
+        text-align: center;
+    }
+
+    .napoleon-section p {
+        text-align: center;
     }
 }
