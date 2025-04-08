@@ -22,9 +22,9 @@
     <meta name="title" content="Chronosphere - Subscription">
     <meta name="description" content="Subscribe to Chronosphere and gain access to exclusive resources, informative videos, and premium content. Choose from Basic, Standard, or Premium plans to suit your needs.">
     <meta name="image" content="https://chronosphere38.wordpress.com/wp-content/uploads/2025/02/pexels-photo-355952.jpeg?w=768&h=534">
-    <title>Chronosphere - Subscription</title>
+    <title>ChronoSphere - Subscription</title>
     <style>
-        /* Napoleon Section Styling */
+        /* Existing styles remain unchanged */
         .napoleon-section {
             display: flex;
             align-items: center;
@@ -52,7 +52,6 @@
             margin: 0;
         }
 
-        /* Subscription Plans Styling */
         .plans-section {
             display: flex;
             justify-content: center;
@@ -105,7 +104,6 @@
             background-color: #c0392b;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .napoleon-section {
                 flex-direction: column;
@@ -133,11 +131,11 @@
 </head>
 <body>
     <header>
-        <h1>Chronosphere</h1>
+        <h1>ChronoSphere</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="Featured.html">Featured</a>
-            <a href="Subscription.html">Manage Subscription</a>
+            <a href="Subscription.html">Subscription</a>
             <a href="signin.html"><button>Sign In</button></a>
         </nav>
     </header>
@@ -146,7 +144,7 @@
 
     <section class="banner-section">
         <img src="https://chronosphere38.wordpress.com/wp-content/uploads/2025/02/pexels-photo-355952.jpeg?w=768&h=534" alt="Quote Image">
-        <blockquote>"Where there is shouting, there is no true knowledge." - Leonardo Da Vinci</blockquote>
+        <blockquote id="dynamic-quote">"Where there is shouting, there is no true knowledge." - Leonardo Da Vinci</blockquote>
     </section>
 
     <section class="napoleon-section">
@@ -187,5 +185,45 @@
         <p>Email: contact@chronosphere.com</p>
         <p>Phone: (803) 884-4321</p>
     </footer>
+
+    <script>
+        // Random quote generator
+        const quotes = [
+            {
+                text: "Where there is shouting, there is no true knowledge.",
+                author: "Leonardo Da Vinci"
+            },
+            {
+                text: "Knowledge is power.",
+                author: "Francis Bacon"
+            },
+            {
+                text: "Learning never exhausts the mind.",
+                author: "Leonardo Da Vinci"
+            },
+            {
+                text: "The only true wisdom is in knowing you know nothing.",
+                author: "Socrates"
+            },
+            {
+                text: "An investment in knowledge pays the best interest.",
+                author: "Benjamin Franklin"
+            },
+            {
+                text: "Education is the kindling of a flame, not the filling of a vessel.",
+                author: "Socrates"
+            }
+        ];
+
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('dynamic-quote');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+            quoteElement.innerHTML = `"${selectedQuote.text}" - ${selectedQuote.author}`;
+        }
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', displayRandomQuote);
+    </script>
 </body>
 </html>
