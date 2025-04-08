@@ -94,8 +94,8 @@
     <h2>Discover Our Resources and Access Informative Videos for New Insights</h2>
 
     <section class="banner-section">
-        <img src="https://chronosphere38.wordpress.com/wp-content/uploads/2025/02/pexels-photo-2781195.jpeg?w=768&h=512" alt="CS Lewis Quote">
-        <blockquote>"The only people that achieve much are those who want knowledge." - C.S. Lewis</blockquote>
+        <img src="https://chronosphere38.wordpress.com/wp-content/uploads/2025/02/pexels-photo-2781195.jpeg?w=768&h=512" alt="Inspirational Quote">
+        <blockquote id="dynamic-quote">"The only people that achieve much are those who want knowledge." - C.S. Lewis</blockquote>
     </section>
 
     <h3>Featured</h3>
@@ -142,5 +142,49 @@
         <p>Email: contact@chronosphere.com</p>
         <p>Phone: (803) 884-4321</p>
     </footer>
+
+    <script>
+        // Random quote generator
+        const quotes = [
+            {
+                text: "The only people that achieve much are those who want knowledge.",
+                author: "C.S. Lewis"
+            },
+            {
+                text: "True knowledge exists in knowing that you know nothing.",
+                author: "Socrates"
+            },
+            {
+                text: "Knowledge is power. Information is liberating.",
+                author: "Kofi Annan"
+            },
+            {
+                text: "Real knowledge is to know the extent of one's ignorance.",
+                author: "Confucius"
+            },
+            {
+                text: "The great aim of education is not knowledge but action.",
+                author: "Herbert Spencer"
+            },
+            {
+                text: "Knowledge shared is knowledge multiplied.",
+                author: "Robert Noyce"
+            },
+            {
+                text: "Learning is a treasure that will follow its owner everywhere.",
+                author: "Chinese Proverb"
+            }
+        ];
+
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('dynamic-quote');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+            quoteElement.innerHTML = `"${selectedQuote.text}" - ${selectedQuote.author}`;
+        }
+
+        // Initialize when page loads
+        window.addEventListener('DOMContentLoaded', displayRandomQuote);
+    </script>
 </body>
 </html>
